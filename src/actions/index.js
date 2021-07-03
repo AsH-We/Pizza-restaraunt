@@ -9,10 +9,10 @@ const menuRequested = () => {
 		type: 'MENU_REQUESTED'
 	}
 };
-const menuCatched = () => {
+const menuError = () => {
 	return {
-		type: 'MENU_CATCHED'
+		type: 'MENU_ERROR'
 	}
 };
 
-export { menuLoaded, menuRequested, menuCatched };
+export { menuLoaded, menuRequested, menuError };

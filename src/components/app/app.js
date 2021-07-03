@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import {MainPage, CartPage} from '../pages';
-import AppHeader from '../app-header';
+import { MainPage, CartPage, ItemPage } from '../pages';
+import AppHeader from '../app-header';	
 
 import Background from './food-bg.jpg';
 
@@ -12,7 +12,9 @@ const App = () => {
 			<Switch>
 				<Route exact path="/" component={MainPage} />
 				<Route path="/cart" component={CartPage} />
-				<Redirect to="/" />
+				<Route path="/:id" component={ItemPage} />
+
+				{/* <Redirect to="/" /> */}
 			</Switch>
 		</div> 
     )
