@@ -17,8 +17,9 @@ const Flex = styled.div`
 	align-items: center
 `;
 
-const MenuListItem = ({ menuItem }) => {
+const MenuListItem = ({ menuItem, onAddToCart }) => {
 	const { url, title, category, price } = menuItem;
+
 	let iconCategory;
 
 	switch(category) {
@@ -53,7 +54,12 @@ const MenuListItem = ({ menuItem }) => {
 							Category: <span>{category}</span>
 						</div>
 						<div className="menu__price">Price: <span>{price}$</span></div>
-						<button className="menu__btn">Add to cart</button>
+						<button 
+							onClick={() => onAddToCart()} 
+							className="menu__btn"
+						>
+							Add to cart
+						</button>
 					</div>
 					<Icon src={iconCategory} alt={`${category} icon`} />
 				</Flex>

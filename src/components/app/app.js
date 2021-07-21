@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import { MainPage, CartPage, ItemPage } from '../pages';
 import AppHeader from '../app-header';	
 
@@ -14,7 +14,7 @@ const App = () => {
 				<Route path="/cart" component={CartPage} />
 				<Route path="/:id" component={ItemPage} />
 
-				{/* <Redirect to="/" /> */}
+				<Redirect to="/" />
 			</Switch>
 		</div> 
     )
